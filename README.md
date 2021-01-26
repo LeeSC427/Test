@@ -151,3 +151,6 @@ int main()
 }
 ```
 ![18](https://user-images.githubusercontent.com/76034423/105818487-5821b980-5ffa-11eb-84e4-901f482751ee.JPG)
+
+
+### time, rand, srand
