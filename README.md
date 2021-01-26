@@ -1,6 +1,6 @@
 # new & delete
 
-strcpy & strcpy_s
+### strcpy & strcpy_s
 
 ```C++
 #define _CRT_SECURE_NO_WARNINGS
@@ -26,3 +26,4 @@ int main()
   return 0;
 }
 ```
+
