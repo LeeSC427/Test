@@ -109,8 +109,8 @@ typedef struct __Point
 
 Point& PntAdder(const Point& p1, const Point& p2)
 {
-  Point* PntAdd = new Point;
-  PntAdd->xpos = p1.xpos + p2.xpos;
+  Point* PntAdd = new Point;                    //구조체 포인터에 Point 크기만큼 메모리 할당
+  PntAdd->xpos = p1.xpos + p2.xpos;             //구조체 멤버에 접근하여 값 할당
   PntAdd->ypos = p1.ypos + p2.ypos;
   
   return *PntAdd;
@@ -118,7 +118,7 @@ Point& PntAdder(const Point& p1, const Point& p2)
 
 int main()
 {
-  Point* Pnt1 = new Point;
+  Point* Pnt1 = new Point;                      //구조체 포인터에 Point 크기만큼 메모리 할당
   Point* Pnt2 = new Point;
   
   std::cout << "1번 x좌표: ";
@@ -130,13 +130,13 @@ int main()
   std::cout << "2번 y좌표: ";
   std::cin >> Pnt2->ypos;
   
-  Point& PointAdd = PntAdder(*Pnt1, *Pnt2);
+  Point& PointAdd = PntAdder(*Pnt1, *Pnt2);     //PntAdder(*Pnt1, *Pnt2)에 대한 참조자 PointAdd 선언
   
   std::cout << std::endl << "최종 좌표: (" << PointAdd.xpos << " , " << PointAdd.ypos << ")" << std::endl;
   
-  delete Pnt1;
-  delete Pnt2;
-  delete& PointAdd;
+  delete Pnt1;                                  //Pnt1에 할당된 메모리 해제
+  delete Pnt2;                                  //Pnt2에 할당된 메모리 해제
+  delete& PointAdd;                             //PointAdd에 할당된 메모리 
   
   return 0;
 }
