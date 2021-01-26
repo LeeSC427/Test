@@ -2,6 +2,7 @@
 
 strcpy & strcpy_s
 
+'''C++
   #define _CRT_SECURE_NO_WARNINGS
   #include <iostream>
   #include <cstring>
@@ -24,3 +25,4 @@ strcpy & strcpy_s
     
   return 0;
   }
+'''
