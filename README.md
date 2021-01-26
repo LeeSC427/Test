@@ -9,20 +9,20 @@ strcpy & strcpy_s
 
 char* MakeStrAdr(int len)
 {
-char* str = (char*)malloc(sizeof(char) * len);
+  char* str = (char*)malloc(sizeof(char) * len);
   
-return str;
+  return str;
 }
 
 int main()
 {
-char* str = MakeStrAdr(20);
-strcpy(str, "I am so happy~");
+  char* str = MakeStrAdr(20);
+  strcpy(str, "I am so happy~");
   
-std::cout<< str <<std::endl;
+  std::cout<< str <<std::endl;
  
-free(str);
+  free(str);
  
-return 0;
+  return 0;
 }
 ```
