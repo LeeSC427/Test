@@ -64,7 +64,9 @@ new 연산자는 동적으로 메모리를 할당하는 연산자이다.(C에서
 * new 연산자는 malloc과 달리 형 변환이 필요가 없다.
 * '주소를 저장할 포인터' = new '할당하고 싶은 크기의 자료형'
  
-  ex. int * number = new int;     //int형의 크기인 4bytes가 number의 메모리에 할당된다
+  ex.
+  
+      int * number = new int;     //int형의 크기인 4bytes가 number의 메모리에 할당된다
   
       int * array = new int[10];  //int형 데이터 10개에 해당되는 메모리의 크기가 array의 메모리에 할당된다
 
@@ -72,7 +74,9 @@ new 연산자는 동적으로 메모리를 할당하는 연산자이다.(C에서
 
 delete 연산자는 new 연산자로 동적 할당된 메모리를 해제한다.
 
-  ex. delete ptr;     //ptr에 동적 할당된 메모리 해제
+  ex.
+  
+      delete ptr;     //ptr에 동적 할당된 메모리 해제
   
       delete []array  //배열 ptr에 동적 할당된 메모리 해제
 
