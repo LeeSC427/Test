@@ -25,6 +25,7 @@ int main()
 }
 ```
 strcpy의 경우 메모리의 사이즈를 지정하지 않기때문에 오류 발생
+
 #define _CRT_SECURE_NO_WARNINGS 를 사용하면 강제로 오류 없이 사용은 가능하다.
 
 ##### strcpy_s
@@ -62,12 +63,14 @@ strcpy_s는 strcpy와 동일하나 문자열의 길이를 설정해주어야 한
 new 연산자는 동적으로 메모리를 할당하는 연산자이다.(C에서 malloc과 유사하지만 동작 방식에 차이가 있다.)
 * new 연산자는 malloc과 달리 형 변환이 필요가 없다.
 * '주소를 저장할 포인터' = new '할당하고 싶은 크기의 자료형'
+ 
   ex. int * number = new int;     //int형의 크기인 4bytes가 number의 메모리에 할당된다
       int * array = new int[10];  //int형 데이터 10개에 해당되는 메모리의 크기가 array의 메모리에 할당된다
 
 ### delete
 
 delete 연산자는 new 연산자로 동적 할당된 메모리를 해제한다.
+
   ex. delete ptr;   //ptr에 동적 할당된 메모리 해제
       delete []array  //배열 ptr에 동적 할당된 메모리 해제
 
