@@ -154,3 +154,25 @@ int main()
 
 
 ### time, rand, srand
+
+```C++
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+
+int main()
+{
+  srand(time(NULL));
+  
+  for(int i=0; i<5; i++)
+  {
+    std::cout<<"random number#"<<i<<": "<<rand() % 100<<std::endl;
+  }
+  
+  return 0;
+}
+```
+
+* time함수: 1970년 1월 1일 0시 0분 0초 부터 경과된 시간을 초(sec)로 반환하는 함수
+* srand함수: srand(seed)에서 seed값과 매칭되는 숫자가 정해지는 함수
+* rand함수: 0부터 RAND_MAX(default: 32767) 사이의 임의의 숫자를 반환하는 함수 (한번 컴파일되면 이후에도 동일한 숫자가 나온다)
